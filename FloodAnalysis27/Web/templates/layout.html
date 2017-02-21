@@ -1,0 +1,89 @@
+<!doctype html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<title>Dynamic Rating Curve</title>
+
+</head>
+
+<body>
+
+<div id="header">
+	<img class="logo" src="images/logo.png"/>
+</div>
+
+<div id="sidebar">
+	<div id="side_container">
+		<div id="query_nwis" class="menu selected">Query NWIS</div>
+		<div id="geometry_param" class="menu">Geometric Params</div>
+		<!--<div id="manning_param" class="menu">Manning Params</div>  -->
+		<div id="flood_param" class="menu">Flood Params</div>
+		<div id="process" class="menu">Process Data</div>
+		<div id="result" class="menu">Results</div>
+	</div>
+</div>
+
+<div id="success_message" class="alert alert-success">
+  <strong id="success_text">Success!</strong> <p class="message zero_margin"></p>
+</div>
+
+<div id="error_message" class="alert alert-danger">
+  <strong id="error_text">Error! </strong> <p class="message zero_margin"></p>
+</div> 
+
+<div id="loading_message" class="alert alert-warning">
+	<p id="loading_text">Processing...</p> <img id="loading_image" 
+	src="images/loading.gif" />
+</div>
+
+<div id="content">
+
+	<div style="display: block" class="content_div" id="query_nwis_content">
+		{% include 'query_nwis.html' %}
+	</div>
+	
+	<div class="content_div"  id="geometry_param_content">
+		{% include 'geometry.html' %}
+	</div>
+	
+	<!--  <div style="display:none" class="content_div"  id="manning_param_content">
+	{% include 'manning.html' %}
+	</div> -->
+	
+	<div class="content_div" id="flood_param_content">
+		{% include 'flood.html' %}
+	</div>
+	
+	<div class="content_div"  id="process_content">
+		{% include 'process.html' %}
+	</div>
+	
+	<div class="content_div" id="result_content">
+		{% include 'result.html' %}
+	</div>
+</div>
+
+<div id="footer"></div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script
+			  src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+			  integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+			  crossorigin="anonymous"></script>
+<script src= "js/aesthetic/jquery.datetimepicker.js"></script>
+<script src= "js/aesthetic/jquery.validate.js"></script>
+<script src= "js/utility/validation.js"></script>
+<script src= "js/utility/file_upload.js"></script>
+<script src= "js/utility/menu.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://gabelerner.github.io/canvg/rgbcolor.js"></script> 
+<script type="text/javascript" src="http://gabelerner.github.io/canvg/StackBlur.js"></script>
+<script type="text/javascript" src="http://gabelerner.github.io/canvg/canvg.js"></script> 
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKbkdjgPWlg8vSn-yDSHCp3ucmcm93bAQ">
+</script>-->

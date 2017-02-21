@@ -1,0 +1,66 @@
+<div id="right_geometry_pane">
+	<div id="picture">
+	
+	</div>
+	<div style="margin-top: 20px" class="form-group">
+			<a id="table_download" href="./download_table"><button style="background-color: #e6e6e6"  
+			class="btn btn-default" >Download Table</button></a>
+	</div>
+</div>
+
+<h1>Geometric Properties</h1>
+<form id="geometry_input_form" enctype="multipart/form-data">
+	 <div class="form-group">
+		  <label for="coord_file">Cross Section Geometry File:</label>
+		  <input id="coord_file" type="file" name="coord_file" />
+	 </div>
+	 
+	 <div class="form-group">
+		  <label for="datum">Datum for Stage:</label>
+		  <input type="text" class="form-control width100" 
+		  id="datum" name="datum" />
+	 </div>
+	 
+	 <div class="form-group">
+		  <label for="sub_divisions">Sub Divisions Across X Axis (optional)</label>
+		  <label for="sub_divisions">(Comma Delimited Values):</label>
+		  <input type="text" class="form-control width150" 
+		  id="sub_divisions" name="sub_divisions" placeholder="E.g. 40,110,200"/>
+	 </div>
+	 
+	<div class="form-group">
+		  <label>Automatically Calculate (Area, Wetted Perimeter, Top Width, Hydraulic Radius):</label><br />
+		  <div style="height: 20px">
+		  <label style="float:left; margin-right: 5px">Yes</label>
+		  <input style="float:left" type="radio" name="auto_calc" class="properties_radio" id="auto" />
+		
+		  <label style="float:left; margin-left: 10px; margin-right: 5px">No</label>
+		  <input style="float:left" type="radio" name="auto_calc" class="properties_radio" id="manual" />
+		  </div>
+	 </div>
+	 
+	 <div id="manual_calc">
+	 	<div class="form-group">
+		  <label for="properties_file">Hydraulic Properties File:</label>
+		  <input id="properties_file" type="file" name="properties_file" />
+	 	</div>
+	 </div>
+	 <div id="auto_calc">
+	 	<div class="form-group">
+		  <label for="z_step">Step To Increment Stage in Calculation:</label>
+		  <input class="width100 block" id="z_step" type="text" name="z_step" />
+	 	</div>
+	 </div>
+	 
+	 <div class="form-group" style="margin-bottom: 50px;">
+		<input style="background-color: #e6e6e6" type="submit" 
+		class="btn btn-default" value="Submit" />
+	</div>
+</form>
+
+
+
+
+
+
+
