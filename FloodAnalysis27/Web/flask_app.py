@@ -14,7 +14,8 @@ import pandas as pd
 
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '/opt/django/webapps/pubs_ui/FloodAnalysis/FloodAnalysis27/Web/uploads'
+#UPLOAD_FOLDER = '/opt/django/webapps/pubs_ui/FloodAnalysis/FloodAnalysis27/Web/uploads'
+UPLOAD_FOLDER = 'C:\\Users\\chogg\\Documents\\GitHub\\FloodAnalysis_v2\\FloodAnalysis27\\Web\\uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'csv'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = ALLOWED_EXTENSIONS
@@ -219,4 +220,4 @@ def serve_pil_image(pil_img):
     return send_file(img_io, mimetype='image/jpeg')  
     
 app.secret_key = os.urandom(24)
-#app.run()
+app.run()

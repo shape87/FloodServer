@@ -219,7 +219,9 @@ def get_wetted_perimeter(coords, left_right, bounds):
     
     #removes duplicate tuples of points
     duplicates = np.where(np.array([coords.count(x) for x in coords]) > 1)
-    coords = np.delete(coords, duplicates[0][0], axis=0)
+    
+    if len(duplicates[0]) > 0:
+        coords = np.delete(coords, duplicates[0][0], axis=0)
     
     #gets the highest points in order to sort the coordinates by its x values
     sort_query = np.where([x[1] == bounds[3] for x in coords])

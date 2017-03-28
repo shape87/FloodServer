@@ -19,8 +19,10 @@ import unit_conversion as uc
 from shapely.geometry import Polygon
 from datetime import datetime
 
-UPLOAD_FOLDER = '/opt/django/webapps/pubs_ui/FloodAnalysis/FloodAnalysis27/Web/uploads'
-USGS_IMAGE = '/opt/django/webapps/pubs_ui/FloodAnalysis/FloodAnalysis27/Web/static/images/usgs.png'
+# UPLOAD_FOLDER = '/opt/django/webapps/pubs_ui/FloodAnalysis/FloodAnalysis27/Web/uploads'
+# USGS_IMAGE = '/opt/django/webapps/pubs_ui/FloodAnalysis/FloodAnalysis27/Web/static/images/usgs.png'
+UPLOAD_FOLDER = 'C:\\Users\\chogg\\Documents\\GitHub\\FloodAnalysis_v2\\FloodAnalysis27\\Web\\uploads'
+USGS_IMAGE = 'C:\\Users\\chogg\\Documents\\GitHub\\FloodAnalysis_v2\\FloodAnalysis27\\Web\\static\\images\\usgs.png'
 
 class GraphOutput:
     
